@@ -4,7 +4,7 @@ from sphinx.application import Sphinx
 from sphinx.util.fileutil import copy_asset_file
 
 try:
-    from sphinx_tudelft_template._version import version as __version__
+    from tud_template._version import version as __version__
 except ImportError:
     __version__ = "1.0.0"
 
