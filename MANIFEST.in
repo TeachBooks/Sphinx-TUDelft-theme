@@ -1,2 +1,2 @@
 include README.md LICENSE
-include src/tud_template/static/*.css
+include src/sphinx_tudelft_theme/static/*.css
