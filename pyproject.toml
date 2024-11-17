@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tud-template"
-version = "0.0.1"
+dynamic=["version"]
 description = "A custom Sphinx extension to apply TU Delft styling to a TeachBook"
 readme = "README.md"
 license = { file = "LICENSE" }
