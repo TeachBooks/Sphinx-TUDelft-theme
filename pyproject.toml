@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "tud-template"
+name = "sphinx-tudelft-theme"
 dynamic=["version"]
 description = "A custom Sphinx extension to apply TU Delft styling to a TeachBook"
 readme = "README.md"
