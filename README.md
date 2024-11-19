@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The default theme in JupyterBooks is usually not desired and need to be changed by adding custom stylesheets. The **Sphinx-TUDelft-theme** extension provides a simple solution to have a uniform theme across all the TeachBooks that is specific to TU Delft image.
+The default theme in JupyterBooks is usually not desired and need to be changed by adding custom stylesheets. The **Sphinx-TUDelft-theme** extension provides a simple solution to have a uniform theme across all the books created at Delft University of Technology that matches the TU Delft identity.
 
 ## What does it do?
 
