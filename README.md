@@ -11,7 +11,7 @@ The default theme in JupyterBooks is usually not desired and need to be changed 
 
 ## What does it do?
 
-This extension applies styling changes, e.g. using specific fonts, and adding particular colours for admonitions. You can see how the TU Delft theme looks like applied in this [example book](https://teachbooks.io/TU-Delft-Theme-Example/main/intro.html).
+This extension applies styling changes, e.g. using specific fonts, and adding particular colours for admonitions. You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
 
 
 ## Installation

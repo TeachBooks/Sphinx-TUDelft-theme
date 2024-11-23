@@ -9,10 +9,16 @@ except ImportError:
     __version__ = "1.0.0"
 
 def copy_stylesheet(app: Sphinx, exc: None) -> None:
-    style = os.path.join(os.path.dirname(__file__), 'static', 'tudelft_style.css')
+    base_dir = os.path.dirname(__file__)
+    style = os.path.join(base_dir, 'static', 'tudelft_style.css')
+    fonts_src_dir = os.path.join(base_dir, 'static', 'fonts', 'RobotoSlab-Regular.ttf')
+    
     if app.builder.format == 'html' and not exc:
-        staticdir = os.path.join(app.builder.outdir, '_static')
-        copy_asset_file(style, staticdir)
+        static_dir = os.path.join(app.builder.outdir, '_static')
+        fonts_dest_dir = os.path.join(static_dir, 'fonts')
+
+        copy_asset_file(style, static_dir)
+        copy_asset_file(fonts_src_dir, fonts_dest_dir)
 
 
 def setup(app: Sphinx):
