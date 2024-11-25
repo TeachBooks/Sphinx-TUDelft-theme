@@ -2,7 +2,7 @@
 
 ```{admonition} User types
 :class: tip
-This page is useful for user type 3 and 5.
+This page is useful for user type 3, 4 and 5.
 ```
 
 ## Introduction
