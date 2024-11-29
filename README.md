@@ -1,4 +1,4 @@
-# Sphinx extension: TU Delft theme 
+# TU Delft theme 
 
 ```{admonition} User types
 :class: tip
