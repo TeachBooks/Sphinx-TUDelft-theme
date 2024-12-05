@@ -45,7 +45,7 @@ If the Delft University of Technology logo should not be set (i.e. use logos def
 sphinx:
   config:
     ...
-    tud_change_logo: True
+    tud_change_logo: False
 ```
 
 
