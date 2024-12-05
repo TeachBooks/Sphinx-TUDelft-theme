@@ -23,7 +23,7 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
 def copy_logos(app: Sphinx, exc: None) -> None:
     base_dir = os.path.dirname(__file__)
     light = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_rgb.png')
-    dark = os.path.join(base_dir, 'static', 'fonts', 'TUDelft_logo_descriptor_white.png')
+    dark = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_white.png')
     
     if app.builder.format == 'html' and not exc:
         static_dir = os.path.join(app.builder.outdir, '_static')
