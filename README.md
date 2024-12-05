@@ -8,6 +8,7 @@ The default theme in JupyterBooks is usually not desired and need to be changed 
 
 This extension applies styling changes, e.g. using specific fonts, and adding particular colours for admonitions. You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
 
+This extension also automatically sets the Delft University of Technology logo (unless specified otherwise).
 
 ## Installation
 To install the Sphinx-Image-Inverter, follow these steps:
@@ -38,6 +39,14 @@ sphinx:
 ## Usage
 
 By following the steps above, the theme will be applied automatically. To see the examples of usage visit the [TeachBooks manual](https://teachbooks.io/manual/intro.html).
+
+If the Delft University of Technology logo should not be set (i.e. use logos defined by the user), include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_change_logo: True
+```
 
 
 ## Contribute
