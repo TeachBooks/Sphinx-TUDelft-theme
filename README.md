@@ -18,7 +18,7 @@ This extension applies styling changes, e.g. using specific fonts, and adding pa
 This extension also automatically sets the Delft University of Technology logo (unless specified otherwise).
 
 ## Installation
-To install the Sphinx-Image-Inverter, follow these steps:
+To implement the TU Delft theme, follow these steps:
 
 **Step 1: Install the Package**
 
