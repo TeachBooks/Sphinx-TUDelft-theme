@@ -21,21 +21,25 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
         copy_asset_file(fonts_src_dir, fonts_dest_dir)
 
 def copy_logos(app: Sphinx, exc: None) -> None:
-    base_dir = os.path.dirname(__file__)
-    light = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_rgb.png')
-    dark = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_white.png')
-    
-    if app.builder.format == 'html' and not exc:
-        static_dir = os.path.join(app.builder.outdir, '_static')
+    if app.config.tud_change_logo:
+        base_dir = os.path.dirname(__file__)
+        light = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_rgb.png')
+        dark = os.path.join(base_dir, 'static', 'TUDelft_logo_descriptor_white.png')
+        
+        if app.builder.format == 'html' and not exc:
+            static_dir = os.path.join(app.builder.outdir, '_static')
 
-        copy_asset_file(light, static_dir)
-        copy_asset_file(dark, static_dir)
+            copy_asset_file(light, static_dir)
+            copy_asset_file(dark, static_dir)
 
 def set_logo(app,conf) -> None:
     if conf.tud_change_logo:
         print('Changing logo to TU Delft logo')
         old =  app.config.html_theme_options
-        old['logo'] = {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
+        if 'logo' in old:
+            old['logo'] = old['logo'] | {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
+        else:
+            old['logo'] = {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
         app.config.html_theme_options = old
     else:
         print('Using user-defined logo')
