@@ -68,14 +68,15 @@ def set_mtext(app,conf):
     if conf.tud_change_mtext:
         print('Changing mtext font to inherited from html')
         old =  app.config
-        if 'mathjax3_config' not in old:
-            old['mathjax3_config'] = {'chtml': {'mtextInheritFont': True}}
-        else:
+        if 'mathjax3_config' in old:
             old_mj = old.mathjax3_config
-            if 'chtml' not in old_mj:
-                old.mathjax3_config['chtml'] = {'mtextInheritFont': True}
-            else:
+            if 'chtml' in old_mj:
                 old.mathjax3_config['chtml'] = old.mathjax3_config['chtml'] | {'mtextInheritFont': True}
+            else:
+                old.mathjax3_config['chtml'] = {'mtextInheritFont': True}         
+        else:
+            old['mathjax3_config'] = {'chtml': {'mtextInheritFont': True}}
+            
         app.config = old
     else:
         print('Using default/user defined mtext font')
