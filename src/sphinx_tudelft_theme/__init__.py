@@ -59,12 +59,13 @@ def set_favicon(app,conf):
     if conf.tud_change_favicon:
         print('Changing favicon to TU Delft favicon')
         old =  app.config
-        # old['html_favicon'] = '_static/TUD_favicon.svg'
+        old['favicons'] = {"rel": "icon", "href": "TUD_favicon.svg", "type": "image/svg+xml"}
         app.config = old
     else:
         print('Using user-defined favicon')
 
 def setup(app: Sphinx):
+    app.setup_extension('sphinx_favicon')
     app.add_config_value('tud_change_logo', True, 'env')
     app.add_config_value('tud_change_favicon', True, 'env')
     app.add_css_file('tudelft_style.css')
