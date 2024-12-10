@@ -45,7 +45,7 @@ def set_logo(app,conf) -> None:
     else:
         print('Using user-defined logo')
 
-def copy_favicon(app: Sphinx) -> None:
+def copy_favicon(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_favicon:
         base_dir = os.path.dirname(__file__)
         favicon = os.path.join(base_dir, 'static', 'TUD_favicon.svg')
