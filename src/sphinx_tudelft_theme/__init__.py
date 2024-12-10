@@ -38,9 +38,9 @@ def set_logo(app,conf) -> None:
         print('Changing logo to TU Delft logo')
         old =  app.config.html_theme_options
         if 'logo' in old:
-            old['logo'] = old['logo'] | {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
+            old['logo'] = old['logo'] | {'image_light':'TUDelft_logo_descriptor_rgb.svg','image_dark': 'TUDelft_logo_descriptor_white.svg'}
         else:
-            old['logo'] = {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
+            old['logo'] = {'image_light':'TUDelft_logo_descriptor_rgb.svg','image_dark': 'TUDelft_logo_descriptor_white.svg'}
         app.config.html_theme_options = old
     else:
         print('Using user-defined logo')
