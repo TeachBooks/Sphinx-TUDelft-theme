@@ -59,7 +59,7 @@ def set_favicon(app,conf):
     if conf.tud_change_favicon:
         print('Changing favicon to TU Delft favicon')
         old =  app.config
-        old['html_favicon'] = '_static/TUD_favicon.svg'
+        old['html_favicon'] = 'TUD_favicon.svg'
         app.config = old
     else:
         print('Using user-defined favicon')
