@@ -45,7 +45,7 @@ def set_logo(app,conf) -> None:
     else:
         print('Using user-defined logo')
 
-def copy_favicon(app: Sphinx, conf) -> None:
+def copy_favicon(app: Sphinx) -> None:
     if app.config.tud_change_favicon:
         base_dir = os.path.dirname(__file__)
         favicon = os.path.join(base_dir, 'static', 'TUD_favicon.svg')
@@ -70,7 +70,7 @@ def setup(app: Sphinx):
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
-    app.connect('config-inited', copy_favicon,0)
+    app.connect('builder-inited', copy_favicon,0)
     app.connect('config-inited',set_logo)
     app.connect('config-inited',set_favicon)
     return {
