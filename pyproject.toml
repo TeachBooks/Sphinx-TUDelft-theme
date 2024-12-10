@@ -12,7 +12,8 @@ authors = [
     { name = "Jakub Fręchowicz", email = "j.s.frechowicz@student.tudelft.nl" }
 ]
 dependencies = [
-    "sphinx"
+    "sphinx",
+    "sphinx-favicon"
 ]
 
 requires-python = ">=3.10"
