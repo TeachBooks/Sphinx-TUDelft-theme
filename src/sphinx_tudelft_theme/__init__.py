@@ -45,13 +45,34 @@ def set_logo(app,conf) -> None:
     else:
         print('Using user-defined logo')
 
+def copy_favicon(app: Sphinx, exc: None) -> None:
+    if app.config.tud_change_favicon:
+        base_dir = os.path.dirname(__file__)
+        favicon = os.path.join(base_dir, 'static', 'TUD_favicon.svg')
+
+        if app.builder.format == 'html' and not exc:
+            static_dir = os.path.join(app.builder.outdir, '_static')
+
+            copy_asset_file(favicon, static_dir)
+
+def set_favicon(app,conf):
+    if conf.tud_change_favicon:
+        print('Changing favicon to TU Delft favicon')
+        old =  app.config
+        old['html_favicon'] = '_static/TUD_favicon.svg'
+        app.config = old
+    else:
+        print('Using user-defined favicon')
 
 def setup(app: Sphinx):
     app.add_config_value('tud_change_logo', True, 'env')
+    app.add_config_value('tud_change_favicon', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
+    app.connect('build-finished', copy_favicon)
     app.connect('config-inited',set_logo)
+    app.connect('config-inited',set_favicon)
     return {
         "version": __version__,
         "parallel_read_safe": True,
