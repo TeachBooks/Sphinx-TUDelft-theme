@@ -64,16 +64,34 @@ def set_favicon(app,conf):
     else:
         print('Using user-defined favicon')
 
+def set_mtext(app,conf):
+    if conf.tud_change_mtext:
+        print('Changing mtext font to inherited from html')
+        old =  app.config
+        if 'mathjax3_config' not in old:
+            old['mathjax3_config'] = {'chtml': {'mtextInheritFont': True}}
+        else:
+            old_mj = old.mathjax3_config
+            if 'chtml' not in old_mj:
+                old.mathjax3_config['chtml'] = {'mtextInheritFont': True}
+            else:
+                old.mathjax3_config['chtml'] = old.mathjax3_config['chtml'] | {'mtextInheritFont': True}
+        app.config = old
+    else:
+        print('Using default/user defined mtext font')
+
 def setup(app: Sphinx):
     app.setup_extension('sphinx_favicon')
     app.add_config_value('tud_change_logo', True, 'env')
     app.add_config_value('tud_change_favicon', True, 'env')
+    app.add_config_value('tud_change_mtext', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
     app.connect('build-finished', copy_favicon)
     app.connect('config-inited',set_logo)
     app.connect('config-inited',set_favicon)
+    app.connect('config-inited',set_mtext)
     return {
         "version": __version__,
         "parallel_read_safe": True,
