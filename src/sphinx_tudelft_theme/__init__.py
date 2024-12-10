@@ -11,14 +11,15 @@ except ImportError:
 def copy_stylesheet(app: Sphinx, exc: None) -> None:
     base_dir = os.path.dirname(__file__)
     style = os.path.join(base_dir, 'static', 'tudelft_style.css')
-    fonts_src_dir = os.path.join(base_dir, 'static', 'fonts', 'RobotoSlab-Regular.ttf')
+    fonts_src_dir2 = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff2')
+    fonts_src_dir = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff')
     
     if app.builder.format == 'html' and not exc:
         static_dir = os.path.join(app.builder.outdir, '_static')
-        fonts_dest_dir = os.path.join(static_dir, 'fonts')
 
         copy_asset_file(style, static_dir)
-        copy_asset_file(fonts_src_dir, fonts_dest_dir)
+        copy_asset_file(fonts_src_dir2, static_dir)
+        copy_asset_file(fonts_src_dir, static_dir)
 
 def copy_logos(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_logo:
