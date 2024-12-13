@@ -11,15 +11,20 @@ except ImportError:
 def copy_stylesheet(app: Sphinx, exc: None) -> None:
     base_dir = os.path.dirname(__file__)
     style = os.path.join(base_dir, 'static', 'tudelft_style.css')
-    fonts_src_dir2 = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff2')
-    fonts_src_dir = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff')
+    if app.config.tud_change_fonts:
+        fonts = os.path.join(base_dir, 'static', 'tudelft_fonts.css')
+        fonts_src_dir2 = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff2')
+        fonts_src_dir = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff')
     
     if app.builder.format == 'html' and not exc:
         static_dir = os.path.join(app.builder.outdir, '_static')
 
         copy_asset_file(style, static_dir)
-        copy_asset_file(fonts_src_dir2, static_dir)
-        copy_asset_file(fonts_src_dir, static_dir)
+        if app.config.tud_change_fonts:
+            app.add_css_file('tudelft_fonts.css')
+            copy_asset_file(fonts, static_dir)
+            copy_asset_file(fonts_src_dir2, static_dir)
+            copy_asset_file(fonts_src_dir, static_dir)
 
 def copy_logos(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_logo:
@@ -88,6 +93,7 @@ def setup(app: Sphinx):
     app.setup_extension('sphinx_favicon')
     app.add_config_value('tud_change_logo', True, 'env')
     app.add_config_value('tud_change_favicon', True, 'env')
+    app.add_config_value('tud_change_fonts', True, 'env')
     app.add_config_value('tud_change_mtext', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
