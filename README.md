@@ -51,7 +51,7 @@ If a Delft University of Technology logo should not be set (i.e. use logos defin
 sphinx:
   config:
     ...
-    tud_change_logo: False
+    tud_change_logo: false
 ```
 
 If a Delft University of Technology favicon should not be set (i.e. use a favicon defined by the user), include the following in your `_config.yml` file:
@@ -59,7 +59,7 @@ If a Delft University of Technology favicon should not be set (i.e. use a favico
 sphinx:
   config:
     ...
-    tud_change_favicon: False
+    tud_change_favicon: false
 ```
 
 If the Delft University of Technology fonts should not be set (i.e. use fonts defined by the user), include the following in your `_config.yml` file:
@@ -67,7 +67,7 @@ If the Delft University of Technology fonts should not be set (i.e. use fonts de
 sphinx:
   config:
     ...
-    tud_change_fonts: False
+    tud_change_fonts: false
 ```
 
 If rendering text inside MathJax should not be the same as the surrounding html, include the following in your `_config.yml` file:
@@ -75,7 +75,7 @@ If rendering text inside MathJax should not be the same as the surrounding html,
 sphinx:
   config:
     ...
-    tud_change_mtext: False
+    tud_change_mtext: false
 ```
 
 If a sticky logo is not preferred, include the following in your `_config.yml` file:
@@ -83,7 +83,7 @@ If a sticky logo is not preferred, include the following in your `_config.yml` f
 sphinx:
   config:
     ...
-    tud_sticky logo: False
+    tud_sticky_logo: false
 ```
 
 
