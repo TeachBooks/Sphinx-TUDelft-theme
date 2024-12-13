@@ -13,8 +13,8 @@ Unless specified otherwise, see [Usage](#usage), this extension also automatical
 - a Delft University of Technology logo;
 - a Delft University of Technology favicon;
 - the Delft University of Technology preferred fonts;
-- rendering text inside MathJax as the surrounding text.
-<!-- - an always visible logo (i.e. a sticky logo). -->
+- rendering text inside MathJax as the surrounding text;
+- an always visible logo (i.e. a sticky logo).
 
 ## Installation
 To implement the TU Delft theme, follow these steps:
@@ -76,6 +76,14 @@ sphinx:
   config:
     ...
     tud_change_mtext: False
+```
+
+If a sticky logo is not preferred, include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_sticky logo: False
 ```
 
 

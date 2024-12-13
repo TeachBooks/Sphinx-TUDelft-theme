@@ -15,6 +15,8 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
         fonts = os.path.join(base_dir, 'static', 'tudelft_fonts.css')
         fonts_src_dir2 = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff2')
         fonts_src_dir = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff')
+    if app.config.tud_sticky_logo:
+        sticky = os.path.join(base_dir, 'static', 'sticky-logo.css')
     
     if app.builder.format == 'html' and not exc:
         static_dir = os.path.join(app.builder.outdir, '_static')
@@ -25,6 +27,9 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
             copy_asset_file(fonts, static_dir)
             copy_asset_file(fonts_src_dir2, static_dir)
             copy_asset_file(fonts_src_dir, static_dir)
+        if app.config.tud_sticky_logo:
+            app.add_css_file('sticky-logo.css')
+            copy_asset_file(sticky, static_dir)            
 
 def copy_logos(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_logo:
@@ -95,6 +100,7 @@ def setup(app: Sphinx):
     app.add_config_value('tud_change_favicon', True, 'env')
     app.add_config_value('tud_change_fonts', True, 'env')
     app.add_config_value('tud_change_mtext', True, 'env')
+    app.add_config_value('tud_sticky logo', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
