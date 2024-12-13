@@ -100,7 +100,7 @@ def setup(app: Sphinx):
     app.add_config_value('tud_change_favicon', True, 'env')
     app.add_config_value('tud_change_fonts', True, 'env')
     app.add_config_value('tud_change_mtext', True, 'env')
-    app.add_config_value('tud_sticky logo', True, 'env')
+    app.add_config_value('tud_sticky_logo', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
