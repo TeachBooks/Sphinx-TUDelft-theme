@@ -15,7 +15,13 @@ The default theme in JupyterBooks is usually not desired and need to be changed 
 
 This extension applies styling changes, e.g. using specific fonts, and adding particular colours for admonitions. You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
 
-This extension also automatically sets the Delft University of Technology logo (unless specified otherwise).
+Unless specified otherwise, see [Usage](#usage), this extension also automatically sets:
+
+- a Delft University of Technology logo;
+- a Delft University of Technology favicon;
+- the Delft University of Technology preferred fonts;
+- rendering text inside MathJax as the surrounding text;
+- an always visible logo (i.e. a sticky logo).
 
 ## Installation
 To implement the TU Delft theme, follow these steps:
@@ -47,12 +53,44 @@ sphinx:
 
 By following the steps above, the theme will be applied automatically. To see the examples of usage visit the [TeachBooks manual](https://teachbooks.io/manual/intro.html).
 
-If the Delft University of Technology logo should not be set (i.e. use logos defined by the user), include the following in your `_config.yml` file:
+If a Delft University of Technology logo should not be set (i.e. use logos defined by the user), include the following in your `_config.yml` file:
 ```
 sphinx:
   config:
     ...
-    tud_change_logo: False
+    tud_change_logo: false
+```
+
+If a Delft University of Technology favicon should not be set (i.e. use a favicon defined by the user), include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_change_favicon: false
+```
+
+If the Delft University of Technology fonts should not be set (i.e. use fonts defined by the user), include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_change_fonts: false
+```
+
+If rendering text inside MathJax should not be the same as the surrounding html, include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_change_mtext: false
+```
+
+If a sticky logo is not preferred, include the following in your `_config.yml` file:
+```
+sphinx:
+  config:
+    ...
+    tud_sticky_logo: false
 ```
 
 
