@@ -1,5 +1,8 @@
 # TU Delft theme 
 
+> This page reuses MIT licensed content from {cite:t}`tudelft_theme`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
+
 ```{admonition} User types
 :class: tip
 This page is useful for user type 3, 4 and 5.
