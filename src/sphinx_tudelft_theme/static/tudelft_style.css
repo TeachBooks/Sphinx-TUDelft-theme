@@ -209,7 +209,7 @@
     border-color: var(--darkBlue);
     background-color: var(--darkBlue-min);
   }
-  div.algorithm > .admonition-title {
+  div.algorithm p.admonition-title {
     background-color: var(--darkBlue-mid);
     border-top: .15rem solid var(--darkBlue-mid);
     border-bottom: .15rem solid var(--darkBlue-mid);
