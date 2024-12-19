@@ -35,6 +35,9 @@
     --green: #6CC24A;
     --green-min: #6CC24A10;
     --green-mid: #6CC24A25;
+    --darkBlue: #0C2340;
+    --darkBlue-min: #0C234010;
+    --darkBlue-mid: #0C234025;
   }
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
