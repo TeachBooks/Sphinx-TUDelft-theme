@@ -50,11 +50,6 @@
    div.admonition > .admonition-title::after {
     color: var(--cyan);
   }
-
-  /* Proof */
-  div.admonition.proof {
-    background-color:#FFF;
-  }
   
   /* Grasple */
   div.grasple p.admonition-title::after {
