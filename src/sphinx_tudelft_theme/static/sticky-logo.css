@@ -4,5 +4,5 @@
     background-color: var(--pst-color-background) !important;
     opacity : 1.0 !important;
     z-index: 999 !important;
-    width: calc(100% - 32px) !important;    
+    width: calc(100% + 32px) !important;    
 }
