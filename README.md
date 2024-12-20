@@ -16,7 +16,19 @@ The default theme in JupyterBooks is usually not desired and need to be changed 
 
 ## What does it do?
 
-This extension applies styling changes, e.g. using specific fonts, and adding particular colours for admonitions. You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
+This extension applies styling changes, being
+
+- particular colours for:
+    - admonitions (e.g. hint, note, tip, error, etc.),
+    - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
+    - exercises,
+    - buttons,
+    - badges,
+    - custom components.
+- particular icons for:
+    - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
+    - exercises,
+    - custom components.
 
 Unless specified otherwise, see [Usage](#usage), this extension also automatically sets:
 
@@ -25,6 +37,8 @@ Unless specified otherwise, see [Usage](#usage), this extension also automatical
 - the Delft University of Technology preferred fonts;
 - rendering text inside MathJax as the surrounding text;
 - an always visible logo (i.e. a sticky logo).
+
+You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
 
 ## Installation
 To implement the TU Delft theme, follow these steps:

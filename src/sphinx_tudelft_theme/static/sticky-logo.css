@@ -1,5 +1,5 @@
 .sidebar-primary-item:has(.logo) {
-    top:0px !important;
+    top:-16px !important;
     position: sticky !important;
     background-color: var(--pst-color-background) !important;
     opacity : 1.0 !important;

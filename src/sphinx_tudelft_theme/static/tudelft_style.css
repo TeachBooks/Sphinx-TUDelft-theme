@@ -35,6 +35,9 @@
     --green: #6CC24A;
     --green-min: #6CC24A10;
     --green-mid: #6CC24A25;
+    --darkBlue: #0C2340;
+    --darkBlue-min: #0C234010;
+    --darkBlue-mid: #0C234025;
   }
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
@@ -49,11 +52,6 @@
   }
    div.admonition > .admonition-title::after {
     color: var(--cyan);
-  }
-
-  /* Proof */
-  div.admonition.proof {
-    background-color:#FFF;
   }
   
   /* Grasple */
@@ -211,7 +209,7 @@
     border-color: var(--darkBlue);
     background-color: var(--darkBlue-min);
   }
-  div.algorithm > .admonition-title {
+  div.algorithm p.admonition-title {
     background-color: var(--darkBlue-mid);
     border-top: .15rem solid var(--darkBlue-mid);
     border-bottom: .15rem solid var(--darkBlue-mid);
