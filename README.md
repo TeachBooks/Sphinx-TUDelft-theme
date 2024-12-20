@@ -10,13 +10,13 @@ This extension applies styling changes, being
 
 - particular colours for:
     - admonitions (e.g. hint, note, tip, error, etc.),
-    - proofs (e.g. theorem, axiom, lemma, corllary, etc.),
+    - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
     - exercises,
     - buttons,
     - badges,
     - custom components.
 - particular icons for:
-    - proofs (e.g. theorem, axiom, lemma, corllary, etc.),
+    - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
     - exercises,
     - custom components.
 
