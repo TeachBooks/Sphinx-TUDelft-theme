@@ -8,13 +8,14 @@ The default theme in JupyterBooks is usually not desired and need to be changed 
 
 This extension applies styling changes, being
 
-- particular colours for:
+- particular colours (different colors for light and dark themes) for:
     - admonitions (e.g. hint, note, tip, error, etc.),
     - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
     - exercises,
     - buttons,
     - badges,
-    - custom components.
+    - custom components,
+    - $\LaTeX$
 - particular icons for:
     - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
     - exercises,
@@ -59,6 +60,27 @@ sphinx:
 ## Usage
 
 By following the steps above, the theme will be applied automatically. To see the examples of usage visit the [TeachBooks manual](https://teachbooks.io/manual/intro.html).
+
+To use the defined colors inside $\LaTeX$ rendered with MathJax, one should use the command
+```
+\class{<color>}{<math>}
+```
+where `<color>` is one of the following colors:
+
+- red
+- blue
+- green
+- raspberry
+- yellow
+- darkGreen
+- orange
+- cyan
+- gray
+- purple
+- pink
+- darkBlue
+
+and `<math>` is the $\LaTeX$ that should be rendered in the color `<color>`.
 
 If a Delft University of Technology logo should not be set (i.e. use logos defined by the user), include the following in your `_config.yml` file:
 ```
