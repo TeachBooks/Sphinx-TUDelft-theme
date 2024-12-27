@@ -78,6 +78,11 @@
     --darkBlue-min: #c1e3ff10;
     --darkBlue-mid: #c1e3ff25;
   }
+
+  html {
+    --pst-color-primary: var(--cyan) !important;
+    --pst-color-secondary: var(--green) !important;
+}
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
 
