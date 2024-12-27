@@ -25,7 +25,8 @@ This extension applies styling changes, being
     - buttons,
     - badges,
     - custom components,
-    - $\LaTeX$
+    - $\LaTeX$,
+    - the primary and secondary color of the book (mainly used for typesetting links).
 - particular icons for:
     - proofs (e.g. theorem, axiom, lemma, corollary, etc.),
     - exercises,
@@ -64,8 +65,22 @@ In your `_config.yml` file, add the extension to the list of Sphinx extra extens
 ```
 sphinx: 
     extra_extensions:
+        .
+        .
+        .
         - sphinx_tudelft_theme
+        .
+        .
+        .
 ```
+
+The following Sphinx extra extensions (if used) must be added _before_ this extension:
+
+- `sphinx_proof`
+- `sphinx_exercise`
+- `teachbooks_sphinx_grasple`
+
+If this is forgotten, the CSS of this extension cannot be applied correctly.
 
 ## Usage
 
