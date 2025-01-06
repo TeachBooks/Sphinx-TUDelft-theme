@@ -591,15 +591,15 @@
     border-color: var(--tud-black) !important;
   }
 
-.red {color: var(--tud-red);}
-.blue {color: var(--tud-blue);}
-.green {color: var(--tud-green);}
-.raspberry {color: var(--tud-raspberry);}
-.yellow {color: var(--tud-yellow);}
-.darkGreen {color: var(--tud-darkGreen);}
-.orange {color: var(--tud-orange);}
-.cyan {color: var(--tud-cyan);}
-.gray {color: var(--tud-gray);}
-.purple {color: var(--tud-purple);}
-.pink {color: var(--tud-pink);}
-.darkBlue {color: var(--tud-darkBlue);}
+.tud-red {color: var(--tud-red);}
+.tud-blue {color: var(--tud-blue);}
+.tud-green {color: var(--tud-green);}
+.tud-tud-raspberry {color: var(--tud-raspberry);}
+.tud-yellow {color: var(--tud-yellow);}
+.tud-darkGreen {color: var(--tud-darkGreen);}
+.tud-orange {color: var(--tud-orange);}
+.tud-cyan {color: var(--tud-cyan);}
+.tud-gray {color: var(--tud-gray);}
+.tud-purple {color: var(--tud-purple);}
+.tud-pink {color: var(--tud-pink);}
+.tud-darkBlue {color: var(--tud-darkBlue);}
