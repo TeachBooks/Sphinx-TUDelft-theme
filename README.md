@@ -82,18 +82,18 @@ To use the defined colors inside $\LaTeX$ rendered with MathJax, one should use 
 ```
 where `<color>` is one of the following colors:
 
-- red
-- blue
-- green
-- raspberry
-- yellow
-- darkGreen
-- orange
-- cyan
-- gray
-- purple
-- pink
-- darkBlue
+- tud-red
+- tud-blue
+- tud-green
+- tud-raspberry
+- tud-yellow
+- tud-darkGreen
+- tud-orange
+- tud-cyan
+- tud-gray
+- tud-purple
+- tud-pink
+- tud-darkBlue
 
 and `<math>` is the $\LaTeX$ that should be rendered in the color `<color>`.
 
