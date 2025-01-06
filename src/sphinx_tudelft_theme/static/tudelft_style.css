@@ -94,11 +94,8 @@
    div.admonition > .admonition-title {
     background-color: var(--tud-cyan-mid);
   }
-  div.admonition > .admonition-title::after {
+   div.admonition > .admonition-title::after {
     color: var(--tud-cyan);
-  }
-  div.admonition > p {
-    color: var(--pst-color-text-base) !important;
   }
   
   /* Grasple */
@@ -204,13 +201,6 @@
    div.proposition > p.admonition-title,
    div.corollary >p.admonition-title {
     background-color: var(--tud-darkGreen-mid);
-  }
-  div.theorem > p,
-  div.criterion > p,
-  div.lemma > p,
-   div.proposition > p,
-   div.corollary >p {
-        color: var(--pst-color-text-base) !important;
   }
   
   /* Example */
