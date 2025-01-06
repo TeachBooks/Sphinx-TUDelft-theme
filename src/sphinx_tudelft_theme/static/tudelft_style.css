@@ -205,6 +205,13 @@
    div.corollary >p.admonition-title {
     background-color: var(--tud-darkGreen-mid);
   }
+  div.theorem > p,
+  div.criterion > p,
+  div.lemma > p,
+   div.proposition > p,
+   div.corollary >p {
+        color: var(--pst-color-text-base) !important;
+  }
   
   /* Example */
   div.example {
