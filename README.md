@@ -1,5 +1,4 @@
-# TU Delft theme 
-
+````{margin}
 ```{attributiongrey} Attribution
 :class: attribution
 This page reuses MIT licensed content from {cite:t}`tudelft_theme`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
@@ -11,8 +10,9 @@ This page is useful for user type 3, 4 and 5.
 ```
 +++
 {bdg-primary}`Sphinx Extension`
+````
 
-## Introduction
+# TU Delft theme 
 
 The default theme in JupyterBooks is usually not desired and need to be changed by adding custom stylesheets. The **Sphinx-TUDelft-theme** extension provides a simple solution to have a uniform theme across all the books created at Delft University of Technology that matches the TU Delft identity.
 
