@@ -86,7 +86,7 @@ If this is forgotten, the CSS of this extension cannot be applied correctly.
 
 ## Usage
 
-By following the steps above, the theme will be applied automatically. To see the examples of usage visit the [TeachBooks manual](https://teachbooks.io/manual/intro.html).
+By following the steps above, the theme will be applied automatically.
 
 To use the defined colors inside $\LaTeX$ rendered with MathJax, one should use the command
 ```
