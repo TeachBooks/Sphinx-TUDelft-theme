@@ -82,6 +82,7 @@
   html {
     --pst-color-primary: var(--tud-cyan) !important;
     --pst-color-secondary: var(--tud-green) !important;
+    --pst-color-table-row-hover-bg: var(--tud-raspberry-mid) !important;
 }
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
