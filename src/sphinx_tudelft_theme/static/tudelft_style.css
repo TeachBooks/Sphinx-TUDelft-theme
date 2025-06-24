@@ -84,6 +84,14 @@
     --pst-color-secondary: var(--tud-green) !important;
     --pst-color-table-row-hover-bg: var(--tud-raspberry-mid) !important;
 }
+
+#pst-back-to-top:hover {
+    background-color: var(--pst-color-secondary) !important;
+}
+
+#pst-back-to-top {
+    background-color: var(--pst-color-primary) !important;
+}
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
 
