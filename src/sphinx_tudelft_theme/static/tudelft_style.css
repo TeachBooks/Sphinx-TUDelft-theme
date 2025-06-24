@@ -122,6 +122,9 @@
   div.grasple > p.admonition-title {
     background-color: var(--tud-raspberry-mid);
   }
+  div.grasple button.fullscreen-btn {
+    color: var(--tud-raspberry);
+  }
   
    /* Exercise */
   div.exercise p.admonition-title::after {
