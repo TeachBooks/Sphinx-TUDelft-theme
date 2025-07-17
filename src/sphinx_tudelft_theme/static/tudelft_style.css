@@ -106,6 +106,21 @@
    div.admonition > .admonition-title::after {
     color: var(--tud-cyan);
   }
+
+     /* Attribution  */
+  div.attribution  {
+    border-color: var(--tud-pink);
+    background-color: var(--tud-pink-min);
+  }
+   div.attribution  > .admonition-title {
+    background-color: var(--tud-pink-mid);
+  }
+   div.attribution  > .admonition-title::after {
+    color: var(--tud-pink);
+  }
+  div.attribution > .admonition-title::after {
+  content: "\f10d";
+}
   
   /* Grasple */
   div.grasple p.admonition-title::after {
