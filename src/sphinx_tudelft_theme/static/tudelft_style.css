@@ -83,6 +83,10 @@
     --pst-color-primary: var(--tud-cyan) !important;
     --pst-color-secondary: var(--tud-green) !important;
     --pst-color-table-row-hover-bg: var(--tud-raspberry-mid) !important;
+    --pst-color-warning: var(--tud-orange) !important;
+    --pst-color-accent: var(--tud-cyan) !important;
+    --pst-color-accent-bg: var(--tud-cyan-min) !important;
+    --pst-color-inline-code: var(--tud-red) !important;
 }
 
 #pst-back-to-top:hover {
@@ -92,6 +96,16 @@
 #pst-back-to-top {
     background-color: var(--pst-color-primary) !important;
 }
+
+
+/* Set title to scale to max width of 100% */
+.title.logo__title {
+      width: 100%;
+      font-size: clamp(1rem, 4vw, 2rem);
+      text-align: center;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
 
