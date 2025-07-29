@@ -17,18 +17,24 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
         fonts_src_dir = os.path.join(base_dir, 'static', 'RobotoSlab-Regular.woff')
     if app.config.tud_sticky_logo:
         sticky = os.path.join(base_dir, 'static', 'sticky-logo.css')
+    if app.config.tud_change_titlesize:
+        title = os.path.join(base_dir, 'static', 'tudelft_title.css')
     
     if app.builder.format == 'html' and not exc:
         static_dir = os.path.join(app.builder.outdir, '_static')
 
         copy_asset_file(style, static_dir)
         if app.config.tud_change_fonts:
-            
+            print('Copying TU Delft fonts')
             copy_asset_file(fonts, static_dir)
             copy_asset_file(fonts_src_dir2, static_dir)
             copy_asset_file(fonts_src_dir, static_dir)
         if app.config.tud_sticky_logo:
-            copy_asset_file(sticky, static_dir)            
+            print('Copying sticky logo CSS')
+            copy_asset_file(sticky, static_dir)
+        if app.config.tud_change_titlesize:
+            print('Copying TU Delft title styling')
+            copy_asset_file(title, static_dir)            
 
 def copy_logos(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_logo:
@@ -99,9 +105,11 @@ def setup(app: Sphinx):
     app.add_config_value('tud_change_fonts', True, 'env')
     app.add_config_value('tud_change_mtext', True, 'env')
     app.add_config_value('tud_sticky_logo', True, 'env')
+    app.add_config_value('tud_change_titlesize', True, 'env')
     app.add_css_file('tudelft_style.css')
     app.add_css_file('tudelft_fonts.css')
     app.add_css_file('sticky-logo.css')
+    app.add_css_file('tudelft_title.css')
     app.connect('build-finished', copy_stylesheet)
     app.connect('build-finished', copy_logos)
     app.connect('build-finished', copy_favicon)
