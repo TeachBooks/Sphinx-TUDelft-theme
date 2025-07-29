@@ -28,7 +28,8 @@ Unless specified otherwise, see [Usage](#usage), this extension also automatical
 - a Delft University of Technology favicon;
 - the Delft University of Technology preferred fonts;
 - rendering text inside MathJax as the surrounding text;
-- an always visible logo (i.e. a sticky logo).
+- an always visible logo (i.e. a sticky logo);
+- a bigger title.
 
 You can see how the TU Delft theme looks like applied in this [example book](http://teachbooks.io/TU-Delft-Theme-Example/).
 
@@ -52,7 +53,7 @@ sphinx-tudelft-theme
 **Step 3: Enable in `_config.yml`**
 
 In your `_config.yml` file, add the extension to the list of Sphinx extra extensions (**important**: underscore, not dash this time):
-```
+```yaml
 sphinx: 
     extra_extensions:
         .
@@ -98,7 +99,7 @@ where `<color>` is one of the following colors:
 and `<math>` is the $\LaTeX$ that should be rendered in the color `<color>`.
 
 If a Delft University of Technology logo should not be set (i.e. use logos defined by the user), include the following in your `_config.yml` file:
-```
+```yaml
 sphinx:
   config:
     ...
@@ -106,7 +107,7 @@ sphinx:
 ```
 
 If a Delft University of Technology favicon should not be set (i.e. use a favicon defined by the user), include the following in your `_config.yml` file:
-```
+```yaml
 sphinx:
   config:
     ...
@@ -114,7 +115,7 @@ sphinx:
 ```
 
 If the Delft University of Technology fonts should not be set (i.e. use fonts defined by the user), include the following in your `_config.yml` file:
-```
+```yaml
 sphinx:
   config:
     ...
@@ -122,7 +123,7 @@ sphinx:
 ```
 
 If rendering text inside MathJax should not be the same as the surrounding html, include the following in your `_config.yml` file:
-```
+```yaml
 sphinx:
   config:
     ...
@@ -130,13 +131,21 @@ sphinx:
 ```
 
 If a sticky logo is not preferred, include the following in your `_config.yml` file:
-```
+```yaml
 sphinx:
   config:
     ...
     tud_sticky_logo: false
 ```
 
+If the title styling should not be altered (i.e. use title styling defined by the user), include the following in your `_config.yml` file:
+
+```yaml
+sphinx:
+  config:
+    ...
+    tud_change_titlesize: false
+```
 
 ## Contribute
 This tool's repository is stored on [GitHub](https://github.com/TeachBooks/Sphinx-TUDelft-theme). The `README.md` of the branch `Manual` is also part of the [TeachBooks manual](https://teachbooks.io/manual/intro.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/Sphinx-TUDelft-theme). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
