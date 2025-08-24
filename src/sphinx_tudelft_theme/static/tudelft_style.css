@@ -249,6 +249,13 @@
     transform: scale(-1, 1);
     color: var(--tud-yellow);
   }
+  div.example button.dual-btn svg {
+    color: var(--tud-yellow);
+}
+
+div.example button.dual-btn span:not(.active) {
+    color: var(--tud-gray);
+}
   
   /* Solution */
   div.admonition.solution {
@@ -635,3 +642,4 @@
 .tud-purple {color: var(--tud-purple);}
 .tud-pink {color: var(--tud-pink);}
 .tud-darkBlue {color: var(--tud-darkBlue);}
+
