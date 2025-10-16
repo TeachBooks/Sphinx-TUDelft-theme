@@ -162,16 +162,19 @@
     background-color: var(--tud-raspberry-mid);
   }
   
-  /* Definition */
-  div.definition p.admonition-title::after {
+  /* Definition, Notation */
+  div.definition p.admonition-title::after,
+  div.notation p.admonition-title::after {
     content: "\f02d";
     color: var(--tud-blue);
   }
-  div.definition {
+  div.definition,
+  div.notation {
     border-color: var(--tud-blue);
     background-color: var(--tud-blue-min);
   }
-  div.definition > p.admonition-title {
+  div.definition > p.admonition-title,
+  div.notation > p.admonition-title {
     background-color: var(--tud-blue-mid);
   }
   
