@@ -42,48 +42,61 @@
 
   html[data-theme="dark"] {
     --tud-raspberry: #ffa7f5;
-    --tud-raspberry-min: #ffa7f503;
-    --tud-raspberry-mid: #ffa7f520;
+    --tud-raspberry-min: #ffa7f520;
+    --tud-raspberry-mid: #ffa7f540;
     --tud-yellow: #a43a00;
-    --tud-yellow-min: #a43a0005;
-    --tud-yellow-mid: #a43a0020;
+    --tud-yellow-min: #a43a0020;
+    --tud-yellow-mid: #a43a0040;
     --tud-darkGreen: #00bd87;
-    --tud-darkGreen-min: #00bd8710;
-    --tud-darkGreen-mid: #00bd8725;
+    --tud-darkGreen-min: #00bd8720;
+    --tud-darkGreen-mid: #00bd8740;
     --tud-blue: #09baff;
-    --tud-blue-min: #09baff10;
-    --tud-blue-mid: #09baff25;
+    --tud-blue-min: #09baff20;
+    --tud-blue-mid: #09baff40;
     --tud-orange: #ff581f;
-    --tud-orange-min: #ff581f10;
-    --tud-orange-mid: #ff581f25;
+    --tud-orange-min: #ff581f20;
+    --tud-orange-mid: #ff581f40;
     --tud-cyan: #00a7ef;
-    --tud-cyan-min: #00a7ef10;
-    --tud-cyan-mid: #00a7ef25;
+    --tud-cyan-min: #00a7ef20;
+    --tud-cyan-mid: #00a7ef40;
     --tud-gray: #828282;
-    --tud-gray-min: #82828205;
-    --tud-gray-mid: #82828220;
-    --tud-purple: #ffa7ff;
-    --tud-purple-min: #ffa7ff05;
-    --tud-purple-mid: #ffa7ff20;
+    --tud-gray-min: #82828220;
+    --tud-gray-mid: #82828240;
+    --tud-purple: #bc5db0;
+    --tud-purple-min: #bc5db020;
+    --tud-purple-mid: #bc5db040;
     --tud-pink: #ff47ab;
-    --tud-pink-min: #ff47ab10;
-    --tud-pink-mid: #ff47ab25;
+    --tud-pink-min: #ff47ab20;
+    --tud-pink-mid: #ff47ab40;
     --tud-red: #ff7161;
-    --tud-red-min: #ff716110;
-    --tud-red-mid: #ff716125;
+    --tud-red-min: #ff716120;
+    --tud-red-mid: #ff716140;
     --tud-green: #008000;
-    --tud-green-min: #00800010;
-    --tud-green-mid: #00800025;
+    --tud-green-min: #00800020;
+    --tud-green-mid: #00800040;
     --tud-darkBlue: #c1e3ff;
-    --tud-darkBlue-min: #c1e3ff10;
-    --tud-darkBlue-mid: #c1e3ff25;
+    --tud-darkBlue-min: #c1e3ff20;
+    --tud-darkBlue-mid: #c1e3ff40;
   }
 
   html {
     --pst-color-primary: var(--tud-cyan) !important;
     --pst-color-secondary: var(--tud-green) !important;
     --pst-color-table-row-hover-bg: var(--tud-raspberry-mid) !important;
+    --pst-color-warning: var(--tud-orange) !important;
+    --pst-color-accent: var(--tud-cyan) !important;
+    --pst-color-accent-bg: var(--tud-cyan-min) !important;
+    --pst-color-inline-code: var(--tud-red) !important;
 }
+
+#pst-back-to-top:hover {
+    background-color: var(--pst-color-secondary) !important;
+}
+
+#pst-back-to-top {
+    background-color: var(--pst-color-primary) !important;
+}
+
   
   /* BLOCK COMPONENTS (admonitions, proofs, exercises) */
 
@@ -98,6 +111,21 @@
    div.admonition > .admonition-title::after {
     color: var(--tud-cyan);
   }
+
+     /* Attribution  */
+  div.attribution  {
+    border-color: var(--tud-pink);
+    background-color: var(--tud-pink-min);
+  }
+   div.attribution  > .admonition-title {
+    background-color: var(--tud-pink-mid);
+  }
+   div.attribution  > .admonition-title::after {
+    color: var(--tud-pink);
+  }
+  div.attribution > .admonition-title::after {
+  content: "\f10d";
+}
   
   /* Grasple */
   div.grasple p.admonition-title::after {
@@ -113,6 +141,9 @@
   }
   div.grasple > p.admonition-title {
     background-color: var(--tud-raspberry-mid);
+  }
+  div.grasple button.fullscreen-btn {
+    color: var(--tud-raspberry);
   }
   
    /* Exercise */
@@ -131,16 +162,19 @@
     background-color: var(--tud-raspberry-mid);
   }
   
-  /* Definition */
-  div.definition p.admonition-title::after {
+  /* Definition, Notation */
+  div.definition p.admonition-title::after,
+  div.notation p.admonition-title::after {
     content: "\f02d";
     color: var(--tud-blue);
   }
-  div.definition {
+  div.definition,
+  div.notation {
     border-color: var(--tud-blue);
     background-color: var(--tud-blue-min);
   }
-  div.definition > p.admonition-title {
+  div.definition > p.admonition-title,
+  div.notation > p.admonition-title {
     background-color: var(--tud-blue-mid);
   }
   
@@ -218,6 +252,13 @@
     transform: scale(-1, 1);
     color: var(--tud-yellow);
   }
+  div.example button.dual-btn svg {
+    color: var(--tud-yellow);
+}
+
+div.example button.dual-btn span:not(.active) {
+    color: var(--tud-gray);
+}
   
   /* Solution */
   div.admonition.solution {
@@ -595,7 +636,7 @@
 .tud-red {color: var(--tud-red);}
 .tud-blue {color: var(--tud-blue);}
 .tud-green {color: var(--tud-green);}
-.tud-tud-raspberry {color: var(--tud-raspberry);}
+.tud-raspberry {color: var(--tud-raspberry);}
 .tud-yellow {color: var(--tud-yellow);}
 .tud-darkGreen {color: var(--tud-darkGreen);}
 .tud-orange {color: var(--tud-orange);}
@@ -604,3 +645,4 @@
 .tud-purple {color: var(--tud-purple);}
 .tud-pink {color: var(--tud-pink);}
 .tud-darkBlue {color: var(--tud-darkBlue);}
+
