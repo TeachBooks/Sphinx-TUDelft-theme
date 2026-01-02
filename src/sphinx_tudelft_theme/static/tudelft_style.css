@@ -128,11 +128,11 @@
 }
   
   /* Grasple */
-  div.grasple p.admonition-title::after {
+  div.grasple > p.admonition-title::after {
     content: "\f12e";
     color: var(--tud-raspberry);
   }
-  div.grasple p.admonition-title::before {
+  div.grasple > p.admonition-title::before {
     content: "";
   }
   div.grasple {
@@ -142,16 +142,16 @@
   div.grasple > p.admonition-title {
     background-color: var(--tud-raspberry-mid);
   }
-  div.grasple button.fullscreen-btn {
+  div.grasple > button.fullscreen-btn {
     color: var(--tud-raspberry);
   }
   
    /* Exercise */
-  div.exercise p.admonition-title::after {
+  div.exercise > p.admonition-title::after {
     content: "\f12e";
     color: var(--tud-raspberry);
   }
-  div.exercise p.admonition-title::before {
+  div.exercise > p.admonition-title::before {
     content: "";
   }
   div.exercise {
@@ -163,8 +163,8 @@
   }
   
   /* Definition, Notation */
-  div.definition p.admonition-title::after,
-  div.notation p.admonition-title::after {
+  div.definition > p.admonition-title::after,
+  div.notation > p.admonition-title::after {
     content: "\f02d";
     color: var(--tud-blue);
   }
@@ -179,9 +179,9 @@
   }
   
   /* Axiom, Conjecture, Assumption */
-  div.axiom  p.admonition-title::after,
-  div.assumption  p.admonition-title::after,
-  div.conjecture  p.admonition-title::after {
+  div.axiom > p.admonition-title::after,
+  div.assumption > p.admonition-title::after,
+  div.conjecture > p.admonition-title::after {
     content: "\f19c";
     color: var(--tud-red);
   }
@@ -198,7 +198,7 @@
   }
 
   /* Property, Observation */
-  div.property  p.admonition-title::after,
+  div.property > p.admonition-title::after,
   div.admonition.observation > .admonition-title::after {
     content: "\f02b";
     color: var(--tud-orange);
@@ -214,11 +214,11 @@
   }
 
   /* Theorem, Lemma, Preposition, Corollary, Criterion  */
-  div.theorem  p.admonition-title::after,
-  div.criterion p.admonition-title::after,
-  div.lemma  p.admonition-title::after,
-  div.proposition p.admonition-title::after,
-  div.corollary p.admonition-title::after {
+  div.theorem > p.admonition-title::after,
+  div.criterion > p.admonition-title::after,
+  div.lemma > p.admonition-title::after,
+  div.proposition > p.admonition-title::after,
+  div.corollary > p.admonition-title::after {
     content: "\f51b";
     color: var(--tud-darkGreen);
   }
@@ -247,16 +247,16 @@
     background-color: var(--tud-yellow-mid);
     /* color: white; */
   }
-  div.example p.admonition-title::after {
+  div.example > p.admonition-title::after {
     content: "\f002";
     transform: scale(-1, 1);
     color: var(--tud-yellow);
   }
-  div.example button.dual-btn svg {
+  div.example > button.dual-btn svg {
     color: var(--tud-yellow);
 }
 
-div.example button.dual-btn span:not(.active) {
+div.example > button.dual-btn span:not(.active) {
     color: var(--tud-gray);
 }
   
@@ -295,7 +295,7 @@ div.example button.dual-btn span:not(.active) {
     border-color: var(--tud-darkBlue);
     background-color: var(--tud-darkBlue-min);
   }
-  div.algorithm p.admonition-title {
+  div.algorithm > p.admonition-title {
     background-color: var(--tud-darkBlue-mid);
     border-top: .15rem solid var(--tud-darkBlue-mid);
     border-bottom: .15rem solid var(--tud-darkBlue-mid);
@@ -386,7 +386,7 @@ div.example button.dual-btn span:not(.active) {
     border-color: var(--tud-darkGreen);
     background-color: var(--tud-darkGreen-mid);
   }
-  div.versionadded .versionmodified.added::before {
+  div.versionadded > .versionmodified.added::before {
     color: var(--tud-darkGreen);
   }
 
@@ -395,7 +395,7 @@ div.example button.dual-btn span:not(.active) {
     border-color: var(--tud-orange);
     background-color: var(--tud-orange-mid);
   }
-  div.versionchanged .versionmodified.changed::before {
+  div.versionchanged > .versionmodified.changed::before {
     color: var(--tud-orange);
   }
 
@@ -404,7 +404,7 @@ div.example button.dual-btn span:not(.active) {
     border-color: var(--tud-red);
     background-color: var(--tud-red-mid);
   }
-  div.deprecated .versionmodified.deprecated::before {
+  div.deprecated > .versionmodified.deprecated::before {
     color: var(--tud-red);
   }
 
