@@ -25,15 +25,12 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
 
         copy_asset_file(style, static_dir)
         if app.config.tud_change_fonts:
-            print('Copying TU Delft fonts')
             copy_asset_file(fonts, static_dir)
             copy_asset_file(fonts_src_dir2, static_dir)
             copy_asset_file(fonts_src_dir, static_dir)
         if app.config.tud_sticky_logo:
-            print('Copying sticky logo CSS')
             copy_asset_file(sticky, static_dir)
         if app.config.tud_change_titlesize:
-            print('Copying TU Delft title styling')
             copy_asset_file(title, static_dir)            
 
 def copy_logos(app: Sphinx, exc: None) -> None:
@@ -49,15 +46,12 @@ def copy_logos(app: Sphinx, exc: None) -> None:
 
 def set_logo(app,conf) -> None:
     if conf.tud_change_logo:
-        print('Changing logo to TU Delft logo')
         old =  app.config.html_theme_options
         if 'logo' in old:
             old['logo'] = old['logo'] | {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
         else:
             old['logo'] = {'image_light':'TUDelft_logo_descriptor_rgb.png','image_dark': 'TUDelft_logo_descriptor_white.png'}
         app.config.html_theme_options = old
-    else:
-        print('Using user-defined logo')
 
 def copy_favicon(app: Sphinx, exc: None) -> None:
     if app.config.tud_change_favicon:
@@ -71,16 +65,12 @@ def copy_favicon(app: Sphinx, exc: None) -> None:
 
 def set_favicon(app,conf):
     if conf.tud_change_favicon:
-        print('Changing favicon to TU Delft favicon')
         old =  app.config
         old['favicons'] = {"rel": "icon", "href": "TUD_favicon.svg", "type": "image/svg+xml"}
         app.config = old
-    else:
-        print('Using user-defined favicon')
 
 def set_mtext(app,conf):
     if conf.tud_change_mtext:
-        print('Changing mtext font to inherited from html')
         old =  app.config
         
         if 'mathjax3_config' in old:
@@ -95,8 +85,6 @@ def set_mtext(app,conf):
             old['mathjax3_config'] = {'chtml': {'mtextInheritFont': True}}
             
         app.config = old
-    else:
-        print('Using default/user defined mtext font')
 
 def setup(app: Sphinx):
     app.setup_extension('sphinx_favicon')
